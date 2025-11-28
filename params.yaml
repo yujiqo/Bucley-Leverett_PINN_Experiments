@@ -1,0 +1,30 @@
+times: [0.25, 0.50, 0.75, 1.00]
+
+baseline:
+  physics:
+    M: 1
+
+  data:
+    ic: 300
+    bc: 300
+    colloc: 20000
+    test: 300
+
+  model:
+    hidden_layers: 8
+    hidden_layer_neurons: 20
+    adam_params:
+      lr: 0.0001
+      epochs: 4000
+      use: true
+    lbfgs_params:
+      lr: 0.5
+      max_iter: 5000
+      history_size: 20
+      epochs: 1
+
+# experiments:
+#   lbfgs_params:
+#     lr: [0.1, 0.5, 1.0]
+#     max_iter: [3000, 5000]
+#     history_size: [10, 20]
